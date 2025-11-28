@@ -10,7 +10,12 @@
         Text: <input type="text" name="text1"><br>
         <?php
             if (isset($hiddenet)) {
-            $textfinal = $count.$_POST["text1"];
+                if (isset($_POST["text1"])) {
+                $textfinal = $count.$_POST["text1"];
+                } else {
+                    $textfinal = $hiddenet;
+                }
+            
             } else {
                 if (isset($_POST["text1"])) {
                 $textfinal = $_POST["text1"];
