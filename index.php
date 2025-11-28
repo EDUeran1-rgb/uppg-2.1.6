@@ -9,13 +9,12 @@
     <form action="index.php" method="POST">
         Text: <input type="text" name="text1"><br>
         <?php
-            if (isset($hiddenet)) {
+            if (isset($_POST["hiddenet"])) {
                 if (isset($_POST["text1"])) {
-                $textfinal = $hiddenet.$_POST["text1"];
+                $textfinal = $_POST["hiddenet"].$_POST["text1"];
                 } else {
-                    $textfinal = $hiddenet;
+                    $textfinal = $_POST["hiddenet"];
                 }
-            
             } else {
                 if (isset($_POST["text1"])) {
                 $textfinal = $_POST["text1"];
