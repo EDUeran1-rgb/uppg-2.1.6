@@ -11,7 +11,7 @@
         <?php
             if (isset($hiddenet)) {
                 if (isset($_POST["text1"])) {
-                $textfinal = $count.$_POST["text1"];
+                $textfinal = $hiddenet.$_POST["text1"];
                 } else {
                     $textfinal = $hiddenet;
                 }
